@@ -23,3 +23,7 @@ gpio/button: program that based on gpio/led_blink.
 gpio/interrupt: program that based on gpio/led_blink.
 		Now we can toggle led state depending on
 		logic level on INT0 using interrupts.
+
+uart/uart_drv: simple uart driver. we can test in witj led,
+		if we receive 1 - led on and if we receive
+		0 - led off.
