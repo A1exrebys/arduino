@@ -19,3 +19,7 @@ gpio/timer_led_blink: program that based on gpio/led_blink.
 gpio/button: program that based on gpio/led_blink.
 		Now we can turn on or off led depending on
 		button state.
+
+gpio/interrupt: program that based on gpio/led_blink.
+		Now we can toggle led state depending on
+		logic level on INT0 using interrupts.
