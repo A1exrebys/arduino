@@ -24,6 +24,10 @@ gpio/interrupt: program that based on gpio/led_blink.
 		Now we can toggle led state depending on
 		logic level on INT0 using interrupts.
 
-uart/uart_drv: simple uart driver. we can test in witj led,
+uart/uart_drv: simple uart driver. we can test in with led,
 		if we receive 1 - led on and if we receive
 		0 - led off.
+
+i2c/i2c_drv: add implemetnation i2c driver. Iw you want to test it,
+		plese take you own i2c device and include your program
+		in while loop in main function.
