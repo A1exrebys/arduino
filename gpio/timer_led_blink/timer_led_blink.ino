@@ -61,30 +61,30 @@ void init_timer()
         /*
          * Clear registers.
          */
-         reg->tccr_1a = 0;
-  	     reg->tccr_1b = 0;
- 	       reg->tccr_1l = 0;
-  	     reg->tccr_1h = 0;
+        reg->tccr_1a = 0;
+        reg->tccr_1b = 0;
+        reg->tccr_1l = 0;
+        reg->tccr_1h = 0;
 
         /*
          * Init ocr register.
          */
-  	     reg->ocr_1h = VALUE >> 8;
-  	     reg->ocr_1l = VALUE & 0x00FF;
+        reg->ocr_1h = VALUE >> 8;
+        reg->ocr_1l = VALUE & 0x00FF;
 
         /*
          * Init timer register.
          */
-  	     reg->tccr_1b |= 1 << WGWM_OFF;
-  	     reg->tccr_1b |= 1 << 2;
-  	     reg->tccr_1b |= 1 << 0;
+        reg->tccr_1b |= 1 << WGWM_OFF;
+        reg->tccr_1b |= 1 << 2;
+        reg->tccr_1b |= 1 << 0;
 
-  	     TIMSK_REG |= 1 << ICIE_OFF;
+        TIMSK_REG |= 1 << ICIE_OFF;
 
         /*
          * Enable interrupt.
          */
-  	     sei();
+        sei();
 }
 
 /*
@@ -92,7 +92,7 @@ void init_timer()
  */
 void init_gpio()
 {
-       DDR_B = 1 << 1;
+        DDR_B = 1 << 1;
 }
 
 /*
@@ -100,7 +100,7 @@ void init_gpio()
  */
 void led_switch()
 {
-       PORT_B ^= 1 << 1;
+        PORT_B ^= 1 << 1;
 }
 
 /*
@@ -114,11 +114,11 @@ int main()
 	init_timer();
 	init_gpio();
 
-	/*
- 	 * Infinite loop
- 	 */
-  	while (1) {
-  	}
+        /*
+         * Infinite loop
+         */
+        while (1) {
+        }
 }
 
 /*
