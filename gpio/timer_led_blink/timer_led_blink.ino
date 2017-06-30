@@ -3,6 +3,10 @@
  * You can find register summary in 428 page of
  * atmega328p.pdf and pinout in pinout.png.
  * Led on pin 9, it is PORTB1 and have offset 0x25.
+ * ocr_1x - OUTPUT COMPARE REGISTER - init in it value to compare
+ * tccr - init in it timer prescaler and init OCR1A
+ * TIMSK - TIMER COUNTER INTERRUPT MASK - enable
+ * Timet/Counter Output Compare A.
  ****************************************************************/
 #include <avr/io.h>
 #include <util/delay.h>
